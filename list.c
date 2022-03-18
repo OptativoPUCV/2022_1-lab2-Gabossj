@@ -40,7 +40,7 @@ void * firstList(List * list) {
     if (list-> head == NULL)
         return NULL;
     list-> current = list -> tail;
-    return (list-> current -> data);
+    return (list-> head -> data);
 }
 
 void * nextList(List * list) {
