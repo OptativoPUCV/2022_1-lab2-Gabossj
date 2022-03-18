@@ -88,3 +88,9 @@ Fri Mar 18 12:05:25 HSP 2022:
  tests:  2|5
 total_score: 15/70
 02ebd53
+Fri Mar 18 12:51:12 HSP 2022: 
+ list.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+ tests:  3|5
+total_score: 15/70
+1c862bb
