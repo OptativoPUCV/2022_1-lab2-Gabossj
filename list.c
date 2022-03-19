@@ -22,50 +22,45 @@ typedef List List;
 Node * createNode(void * data) {
     Node * new = (Node *)malloc(sizeof(Node));
     assert(new != NULL);
-    new->data = data;
-    new->prev = NULL;
-    new->next = NULL;
+    new -> data = data;
+    new -> prev = NULL;
+    new -> next = NULL;
     return new;
 }
 
 List * createList() {
     List* list= (List*)malloc(sizeof(List));
-    list-> head = NULL;
-    list-> tail = NULL;
-    list-> current = NULL; 
+    list -> head = NULL;
+    list -> tail = NULL;
+    list -> current = NULL; 
     return list;
 }
 
 void * firstList(List * list) {
-    if (list == NULL || list-> head == NULL)
+    if (list == NULL || list -> head == NULL)
         return NULL;
     list-> current = list -> head;
-    return (list-> head-> data);
+    return (list -> head -> data);
 }
 
 void * nextList(List * list) {
-    if (list->current && list -> current ->next){
-        list->current = list -> current ->next;
-        return (list-> current-> data);}
+    if (list -> current && list -> current -> next){
+        list -> current = list -> current -> next;
+        return (list -> current -> data);}
     return NULL;
 }
 
 void * lastList(List * list) {
-    if (list == NULL || list->head == NULL){
+    if (list == NULL || list -> head == NULL){
         return NULL;}
-    list ->current = list-> tail;
-    return (list-> tail-> data);
+    list -> current = list -> tail;
+    return (list -> tail -> data);
 }
 
 void * prevList(List * list) {
-    /*if(list == NULL || list->head == NULL || list->current || list->current->prev){
-        return NULL;}
-    list ->current = list -> current ->prev;
-    return (list->current->prev);*/
-
-    if(list->current && list->current->prev){
-        list->current = list->current->prev;
-        return (list->current->data);}
+    if(list -> current && list -> current->prev){
+        list -> current = list -> current->prev;
+        return (list -> current -> data);}
     return NULL;
 }
 
