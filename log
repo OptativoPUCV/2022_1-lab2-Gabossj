@@ -277,3 +277,24 @@ Fri Mar 18 23:35:34 HSP 2022:
  tests:  9|3
 total_score: 35/70
 1df4e4e
+Sun Mar 20 17:04:39 HSP 2022: 
+ list.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from list.c:3:0,
+                 from test.c:5:
+list.c: In function 'createList':
+list.c:33:12: error: 'new' undeclared (first use in this function)
+     assert(new != NULL);
+            ^
+list.c:33:12: note: each undeclared identifier is reported only once for each function it appears in
+list.c: In function 'pushFront':
+list.c:70:12: error: 'new' undeclared (first use in this function)
+     assert(new != NULL);
+            ^
+In file included from test.c:5:0:
+list.c:71:11: error: unused variable 'nodo' [-Werror=unused-variable]
+     Node* nodo = createNode(data);
+           ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+b09c30f
