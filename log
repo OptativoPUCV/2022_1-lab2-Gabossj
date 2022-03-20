@@ -298,3 +298,20 @@ list.c:71:11: error: unused variable 'nodo' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 b09c30f
+Sun Mar 20 17:05:34 HSP 2022: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from list.c:3:0,
+                 from test.c:5:
+list.c: In function 'pushFront':
+list.c:70:12: error: 'new' undeclared (first use in this function)
+     assert(new != NULL);
+            ^
+list.c:70:12: note: each undeclared identifier is reported only once for each function it appears in
+In file included from test.c:5:0:
+list.c:71:11: error: unused variable 'nodo' [-Werror=unused-variable]
+     Node* nodo = createNode(data);
+           ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+54203f2
