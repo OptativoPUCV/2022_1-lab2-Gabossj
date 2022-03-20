@@ -116,6 +116,7 @@ void * popCurrent(List * list) {
 }
 
 void cleanList(List * list) {
+    assert(list != NULL);
     while (list->head != NULL) {
         popFront(list);
     }
